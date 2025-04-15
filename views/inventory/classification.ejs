@@ -1,0 +1,19 @@
+<%- include('../partials/head', {title}) %>
+<%- include('../partials/header') %>
+
+<main>
+    <%# Content Heading Section %>
+    <% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+        res.redirect('/')
+    } %>
+
+    <%# Message Block Section %>
+    <%# messages() %>
+
+    <%# Inventory Items Display Section %>
+    <%- grid %>
+</main>
+
+<%- include('../partials/footer') %> 
